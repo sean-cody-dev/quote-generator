@@ -6,6 +6,7 @@ const newQuoteBtn = document.getElementById('new-quote');
 const sameTagBtn = document.getElementById('same-tag');
 const sameAuthorBtn = document.getElementById('same-author');
 const loader = document.getElementById('loader');
+const themeSwitchWrapper = document.getElementById('theme-switch-wrapper');
 
 let apiQuotes = [];
 let currentQuote = {};
@@ -13,11 +14,14 @@ let currentQuote = {};
 function showLoadingSpinner() {
     loader.hidden = false;
     quoteContainer.hidden = true;
+    themeSwitchWrapper.hidden = true;
 }
 
 function removeLoadingSpinner() {
     loader.hidden = true;
     quoteContainer.hidden = false;
+    themeSwitchWrapper.hidden = false;
+
 }
 
 // Get new quote by same author
